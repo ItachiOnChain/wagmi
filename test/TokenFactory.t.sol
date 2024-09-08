@@ -27,7 +27,7 @@ contract TokenFactoryTest is Test {
         string memory name = "My Awesome Token";
         string memory ticker = "MAT";
         address tokenAddress = factory.createToken(name, ticker);
-        Token token = Token(tokenAddress);
+        // Token token = Token(tokenAddress);
         uint totalBuyableSupply = factory.MAX_SUPPLY() - factory.INITIAL_MINT();
         uint requiredEth = factory.calcualteRequiredEth(tokenAddress, totalBuyableSupply);
         assertEq(requiredEth, 30*10**18);

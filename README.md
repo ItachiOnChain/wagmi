@@ -18,49 +18,13 @@ https://book.getfoundry.sh/
 ### Build
 
 ```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
+forge build
 ```
 
 ### Deploy
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
+We have used the [Linea Sepolia Testnet](https://rpc.sepolia.linea.build)
 
 ```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+ forge script script/DeployTokenFactory.s.sol:DeployTokenFactory --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
 ```
